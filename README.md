@@ -25,29 +25,29 @@ Website: TBA
 To download and install our software on a Windows system, please follow these steps:
 ## 1.	Access the Download Page:
 Scroll down on our website until you find the "Download for Windows ↓" button. Click on the button to initiate the download of a zip file. Or simply download the zip file from git-hub.
-2.	Extract Files:
+## 2.	Extract Files:
 After downloading, extract the contents of the zip file. Locate the executable file named cypher_py.exe, which serves as the main program.
-3.	Install WinPcap:
+## 3.	Install WinPcap:
 In the extracted files, find the "WinPcap_4_1_3.exe" file. Execute this file to launch the installation wizard for WinPcap. Follow the instructions provided by the wizard to complete the installation of WinPcap.
-4.	Configure Java Runtime Environment:
+## 4.	Configure Java Runtime Environment:
 Before using the main software, ensure that the Java Runtime Environment (JRE) variable is set up on your system. Follow these steps:
 Set Up Java Environment Variable (Windows 11):
 
-a.	Verify JRE Installation:
+### a.	Verify JRE Installation:
 Confirm that Java is installed on your system. If not, download and install the latest version from the official Java website.
 
-b.	Access Environment Variables:
+### b.	Access Environment Variables:
 •	Click on the Start button and select "Settings."
 •	In the Settings window, click on "System," and then choose "About."
 •	Scroll down and click on "Advanced system settings."
 •	In the System Properties window, click the "Environment Variables" button.
 
-c.	Add Java Installation Path to PATH:
+### c.	Add Java Installation Path to PATH:
 •	Under the "System variables" section, locate and select the "Path" variable, then click "Edit."
 •	Click "New" and add the path to your Java installation directory (e.g., C:\Program Files\Java\jdk1.8.0_281\bin).
 •	Click "OK" to close each window.
 
-d.	Verify Configuration:
+### d.	Verify Configuration:
 Open a new Command Prompt window and type java -version to ensure that the Java environment variable is set up correctly. You should see information about your installed Java version.
 
-You are now ready to use the main software. Execute cypher_py.exe to launch the application.                                                                            
+# You are now ready to use the main software. Execute cypher_py.exe to launch the application.                                                                            
