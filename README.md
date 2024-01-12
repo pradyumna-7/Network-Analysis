@@ -1,4 +1,4 @@
-# Network-Analysis
+# Network-Analysis-using-ML
 Intrusion Detection of Network using Machine Learning with Python
 
 # Official documentation for CyPHER
