@@ -13,7 +13,10 @@ In addition to its primary network analysis capabilities, our software includes 
 As for now this has only been developed for WINDOWS systems only.
 
 # Working:
-Here we will talk about the brief understanding of how the software works and all the modules/dependencies used to build the software. ![Flowchart for Network-Analysis Flow Procces](Flow_procces.png) 
+Here we will talk about the brief understanding of how the software works and all the modules/dependencies used to build the software.
+<br/>
+![Flowchart for Network-Analysis Flow Procces](Flow_procces.png) 
+<br/>
 The diagram above, a flowchart, simplifying the Network analysis process flow into 10 steps. 
 Using the python module scapy, we were able to capture packets for a specified duration, here                                                                                                                      in this case 60 secs, by interacting with the OS kernel to set up packet capture. Mainly interact-ing with Data-Link Layer and Network Layerconsidering the OSI model. The captured packets are parsed and extracting necessary information, returning a list of Packet objects which are then save to a file in the libpcap format, hence converting the List of Packet Objects to a pcap file. The pcap file is then analyzed by CICFlowMeter, mainly for feature extraction. It reads pcap files containing captured network traffic; for each packet, it analyzes the source and destination addresses, creating bidirectional flows (bi-flows) representing the communication between two endpoints. 
 CICFlowMeter creates unique “flow-key” for each bi-directional flow using the Source IP, Dest IP, Source Port, Dest Port, and Protocol. By analysing packets that have the same “flow key” are grouped together into the same bi-flow. This creates a continuous representation of the communication between two endpoints. Hence, to put it in simpler terms CICFlowMeter provides a higher-level view of network traffic as flows instead of a long list of packets. 
