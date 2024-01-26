@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Share:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="faq-page">
+      <div class="back2home" id="back2homeContainer">
+        <div class="vector-wrapper">
+          <img class="vector-icon" alt="" src="./public/vector.svg" />
+        </div>
+        <b class="home">Home</b>
+      </div>
+      <div class="frame-parent">
+        <div class="ask-your-queries-here-wrapper">
+          <b class="ask-your-queries">Ask your Queries Here</b>
+        </div>
+        <div class="frame-wrapper">
+          <div class="frame-group">
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="enter-your-email-wrapper">
+                  <div class="ask-your-queries">Enter your Email</div>
+                </div>
+                <div class="ex-stephenrajugmailcom-wrapper">
+                  <div class="ex-stephenrajugmailcom">
+                    <input type="text" required inputmode="email" id="userEmail" placeholder="ex:- stephenraju@gmailcom" style="background-color: transparent;
+                    border: transparent;width: 100%;
+                    outline: none;
+                    font-size: inherit;">
+                  </div>
+                </div>
+              </div>
+              <div class="frame-parent1">
+                <div class="enter-your-query-below-wrapper">
+                  <div class="ask-your-queries">Enter Your query Below</div>
+                </div>
+                <div class="rectangle-wrapper">
+                  <div class="frame-child" id="userQuery" contenteditable style="padding: 10px; color: black; overflow-y: auto; max-height: 200px;">
+                  </div>
+                </div>
+              </div>                          
+              <div class="sendbtn" id="sendFAQbutton" style="cursor: pointer;">
+                <div class="send">Send</div>
+              </div>
+            </div>
+            <div class="unsplashzcb1peosu3m-wrapper">
+              <img
+                class="unsplashzcb1peosu3m-icon"
+                alt=""
+                src="./public/unsplashzcb1peosu3m@2x.png"
+              />
+            </div>
+          </div>
+        </div>
+      
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            emailjs.init("H2M4Yit4wPUOtlVe4");
+      
+            var sendButton = document.getElementById("sendFAQbutton");
+            var userEmailInput = document.getElementById("userEmail");
+            var userQueryInput = document.getElementById("userQuery");
+      
+            sendButton.addEventListener("click", function() {
+              var userEmail = userEmailInput.value;
+              var userQuery = userQueryInput.innerText;
+      
+              // Check if email and query are not empty
+              if (userEmail && userQuery) {
+                sendEmail(userEmail, userQuery);
+              } else {
+                alert("Please enter both email and query before sending.");
+              }
+            });
+      
+            function sendEmail(email, query) {
+              var templateParams = {
+                to_email: userEmail,
+                from_name: "User",
+                user_email: email,
+                user_query: query
+              };
+      
+              emailjs.send("service_k9h7p8c", "template_qohgq41", templateParams)
+                .then(function(response) {
+                  console.log("Email sent successfully:", response);
+                  alert("Email sent successfully!");
+                }, function(error) {
+                  console.error("Failed to send email:", error);
+                  alert("Failed to send email. Please try again later.");
+                });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    
+    <script>
+      var back2homeContainer = document.getElementById("back2homeContainer");
+      if (back2homeContainer) {
+        back2homeContainer.addEventListener("click", function (e) {
+          window.location.href = "./index.html";
+        });
+      }
+      </script>
+  </body>
+</html>
