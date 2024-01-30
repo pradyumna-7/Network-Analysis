@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CyPHER-About Us</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <!-- Favicon -->
+        <link href="./public/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <style>
+            body{
+               background:#1f1f65;
+            }
+            .page-header {
+                position: relative;
+                margin-bottom: 20px;
+                padding: 40px 0;
+                text-align: center;
+                background: #0d0935;
+                box-shadow: 0 8px 16px black;
+            }
+
+            .page-header h2 {
+                position: relative;
+                color: white;
+                font-size: 60px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                padding-bottom: 5px;
+            }
+
+            .page-header h2::after {
+                position: absolute;
+                content: "";
+                width: 250px;
+                height: 2px;
+                left: calc(40% + 41px);
+                bottom: 0;
+                background: white;
+            }
+
+            .page-header h3 {
+                position: relative;
+                padding: 0 12px;
+                font-size: 22px;
+                color: white;
+            }
+
+            @media (max-width: 991.98px) {
+                .page-header {
+                    padding: 60px 0;
+                }
+
+                .page-header h2 {
+                    font-size: 45px;
+                }
+
+                .page-header a {
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width: 767.98px) {
+                .page-header {
+                    padding: 45px 0;
+                }
+
+                .page-header h2 {
+                    font-size: 35px;
+                }
+
+                .page-header a {
+                    font-size: 18px;
+                }
+            }
+            .svg{
+                left: -70px;
+                font-size: 36px;
+            }
+            
+            
+            .team {
+                position: relative;
+                width: 100%;
+                padding: 45px 0 15px 0;
+            }
+
+            .team .team-item {
+                position: relative;
+                margin-bottom: 30px;
+/*                overflow: hidden;*/
+                border-radius: 80px;
+                left: 80px;
+                transition: 3s;
+            }
+
+            .team .team-img {
+                position: relative;
+            }
+
+            .team .team-img img {
+                width:368.5px;
+                height:500px;
+            }
+
+            .team .team-text {
+                position: relative;
+                padding: 25px 15px;
+                text-align: center;
+                background: #030f27;
+                transition: .5s;
+            }
+
+            .team .team-text h2 {
+                font-size: 20px;
+                font-weight: 600;
+                color: #fdbe33;
+                transition: .5s;
+            }
+
+            .team .team-text p {
+                margin: 0;
+                color: #ffffff;
+            }
+
+            .team .team-item:hover .team-text {
+                background: #fdbe33;
+            }
+
+            .team .team-item:hover .team-text h2 {
+                color: #030f27;
+                letter-spacing: 2px;
+            }
+
+            .team .team-social {
+                position: absolute;
+                width: 100px;
+                top: 0;
+                left: -50px;
+                display: flex;
+                flex-direction: column;
+                font-size: 0;
+            }
+
+            .team .team-social a {
+                position: relative;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: #ffffff;
+                transition: 1s;
+            }
+
+            
+            .team-item:hover{
+                border-radius: 0px;
+                transition: 1s;
+            }
+
+            .team .team-item:hover .team-social a:first-child {
+                background: black;
+                left: 50px;
+                transition: .3s 0s;
+            }
+
+            .team .team-item:hover .team-social a:nth-child(2) {
+                background: #3b5998;
+                left: 50px;
+                transition: .3s .1s;
+            }
+
+            .team .team-item:hover .team-social a:nth-child(3) {
+                background: #0e76a8;
+                left: 50px;
+                transition: .3s .2s;
+            }
+
+            .team .team-item:hover .team-social a:nth-child(4) {
+                background: #f09433; 
+                background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+                background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+                left: 50px;
+                transition: .3s .3s;
+            }
+
+            @media (max-width: 767.98px) {
+                .team-item{
+                    left:50px;
+                }
+            }
+            
+            .logo{
+                position: fixed;
+                object-fit: contain;
+                width:160px;
+                height:40px;
+                right:30px;
+                bottom:30px;
+            }
+
+        </style>
+        <div class="page-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-1">
+                         <a href="index.html" class="home">
+                            <img src="./public/vector.svg" alt="back button" >
+                        </a>
+                    </div>
+                    <div class="col-1 svg"><a href="index.html" class="home" style="text-decoration: none;"><h3 style="font-size: 34px;margin-top: -5px;">Home</h3></a></div>
+                    <div class="col-12">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="col-12">
+                        <h3>Meet Our Team</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 wow fadeInLeft" data-wow-delay="0.1s">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="./public/about1.jpg" alt="Team Image">
+                                </div>
+                                <div class="team-text" style="width: 368.5px;">
+                                    <h2>Pradyumna Jonnalagadda</h2>
+                                    <p>The guy who cant center a div</p>
+                                </div>
+                                <div class="team-social">
+                                    <a class="social-tw" href="https://github.com/pradyumna-7"><i class="fab fa-github"></i></a>
+                                    <a class="social-fb" href="https://www.facebook.com/pradyumna.jonnalagadda/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="social-li" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="social-in" href="https://www.instagram.com/pradyumna.jonnalagadda/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="./public/about2.jpg" alt="Team Image">
+                                </div>
+                                <div class="team-text" style="width: 368.5px;">
+                                    <h2>Bhardwaj Reddy</h2>
+                                    <p>Obessed with Figma</p>
+                                </div>
+                                <div class="team-social">
+                                    <a class="social-tw" href="https://github.com/Bharadwajreddy1406"><i class="fab fa-github"></i></a>
+                                    <a class="social-fb" href="https://www.facebook.com/profile.php?id=100085259603382"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="social-li" href="https://www.linkedin.com/in/bharadwajreddy1406"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="social-in" href="https://www.instagram.com/_reddy_1406_?igsh=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="./public/about3.jpg" alt="Team Image">
+                                </div>
+                                <div class="team-text" style="width: 368.5px;">
+                                    <h2>Sagar Puppala</h2>
+                                    <p>The Pocket Rocket</p>
+                                </div>
+                                <div class="team-social">
+                                    <a class="social-tw" href="https://github.com/Puppala-Sagar"><i class="fab fa-github"></i></a>
+                                    <a class="social-fb" href="https://www.linkedin.com/in/puppala-sagar/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="social-li" href="https://twitter.com/Sagar31012004"><i class="fab fa-twitter"></i></a>
+                                    <a class="social-in" href="https://youtu.be/pq6jAJQ2pHs?si=7Pp5LmL-aIy1s_b_"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="./public/about4.jpg" alt="Team Image">
+                                </div>
+                                <div class="team-text" style="width: 368.5px;">
+                                    <h2>Baba Gandhi</h2>
+                                    <p>The Genshin guy</p>
+                                </div>
+                                <div class="team-social">
+                                    <a class="social-tw" href="https://github.com/babagandhi"><i class="fab fa-github"></i></a>
+                                    <a class="social-fb" href="https://www.facebook.com/profile.php?id=100009310518265"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="social-li" href="https://www.linkedin.com/in/baba-gandhi-kandagatla-098418282/"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="social-in" href="https://www.instagram.com/babagandhikandagatla/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="./public/about.jpg" alt="Team Image">
+                                </div>
+                                <div class="team-text" style="width: 368.5px;">
+                                    <h2>Priya Darshini</h2>
+                                    <p>The Certified Therapist</p>
+                                </div>
+                                <div class="team-social">
+                                    <a class="social-tw" href="https://github.com/Priyaperabathina"><i class="fab fa-github"></i></a>
+                                    <a class="social-in" href="https://www.instagram.com/_.its_ayirp._/" style=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="team-item">
+                                <div class="team-img">
+                                    <img src="./public/about.jpg" alt="Team Image">
+                                </div>
+                                <div class="team-text" style="width: 368.5px;">
+                                    <h2>Sai Teja</h2>
+                                    <p>The Anime Artist</p>
+                                </div>
+                                <div class="team-social">
+                                    <a class="social-tw" href=""><i class="fab fa-github"></i></a>
+                                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <img src="./public/logo.png" alt="logo" class="logo">
+    </body>
+</html>
