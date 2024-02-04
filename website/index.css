@@ -63,21 +63,9 @@
 .korem-ipsum-dolor {
   flex: 1;
   position: relative;
+  text-align: center;
 }
-.korem-ipsum-dolor-sit-amet-con-wrapper {
-  margin: 0 !important;
-  position: absolute;
-  top: 290px;
-  left: 252px;
-  width: 814px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: var(--padding-3xs);
-  box-sizing: border-box;
-  z-index: 1;
-}
+
 .free-malware-scanner {
   flex: 1;
   position: relative;
@@ -291,6 +279,7 @@
 }
 .rectangle-icon1 {
   position: absolute;
+  opacity: 55%;
   height: 23.43%;
   width: 90.76%;
   top: 52.11%;
@@ -368,7 +357,8 @@
   justify-content: flex-end;
 }
 .cont2-wrapper {
-  align-self: stretch;
+  width: 900px;
+  align-self: center;
   padding: var(--padding-3xs);
   font-size: var(--font-size-3xl);
   color: var(--color-gainsboro-200);
@@ -614,8 +604,8 @@
 }
 .faq {
   position: absolute;
+  left: 44%;
   top: 3323px;
-  left: calc(50% - 334px);
   border-radius: var(--br-4xs);
   background-color: var(--color-gainsboro-100);
   box-shadow: 0 16px 12px rgba(0, 0, 0, 0.25);

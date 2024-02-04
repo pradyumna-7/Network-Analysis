@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="./public/favicon.ico" rel="icon">
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
+    <title>CyPHER - KMIT</title>
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
     <link
@@ -109,10 +110,11 @@
         </div>
         <div class="cont2-wrapper">
           <b class="korem-ipsum-dolor"
-            >Korem ipsum dolor sit amet consecteturKorem ipsum dolor sit amet
-            consecteturKorem ipsum dolor sit amet consecteturKorem ipsum dolor
-            sit amet consecteturKorem ipsum dolor sit amet consecteturKorem
-            ipsum dolor sit amet
+            >Elevate your cybersecurity game with our advanced predictive tool!
+             By meticulously analyzing network traffic, USB activity, and system scans,
+              we forecast potential compromises, giving you the upper hand 
+              against evolving threats. Experience the best defense solution 
+              – download now and safeguard your system with confidence.
           </b>
         </div>
         <div class="download-btn2">
@@ -129,15 +131,14 @@
     var downloadButton = document.getElementById("downloadButton");
 
     downloadButton.addEventListener("click", function() {
-        // You can replace '#' with the actual file URL you want to download
-        var fileUrl = "public\\Final.zip";
+        var fileUrl = "./public/final.7z";
         downloadFile(fileUrl);
     });
 
     function downloadFile(url) {
         var link = document.createElement('a');
         link.href = url;
-        link.download = "Cypher"; // Set the desired file name
+        link.download = "Cypher"; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -165,10 +166,7 @@
       </div>
       <script>
         document.getElementById('downloaddocumentation').onclick = function() {
-          // Replace 'your_file_url' with the actual URL of your file
-          var fileUrl = './public/Official documentation for CyPHER.pdf';
-          
-          // Open the file in a new tab
+              var fileUrl = './public/Official_documentation_for_CyPHER.pdf';
           window.open(fileUrl, '_blank');
         };
 
@@ -182,8 +180,9 @@
             <img class="content1-child" alt="" src="./public/vector-1.svg" />
 
             <div class="korem-ipsum-dolor">
-              Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et veli
+              Empower your cybersecurity with our cutting-edge solution.
+               Stay ahead of threats and protect your system with confidence. 
+               Explore now!
             </div>
           </div>
         </div>
@@ -201,38 +200,14 @@
           </a></div>
         </div>
       </div>
-      <div class="instructions" id="instruct" style="cursor: pointer;">
-        <b class="instructions1">
-          <p class="scan-malware-from">Instructions</p>
-        </b>
-      </div>
+      
       <div class="faq" id="fAQContainer">
         <b class="faqs">FAQ’s</b>
       </div>
     </div>
     </div>
     
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-  var downloadButton = document.getElementById("instruct");
 
-  downloadButton.addEventListener("click", function() {
-      // You can replace '#' with the actual file URL you want to download
-      var fileUrl = "public\\BharadwajReddy_resume_finale001.pdf";
-      downloadFile(fileUrl);
-  });
-
-  function downloadFile(url) {
-      var link = document.createElement('a');
-      link.href = url;
-      link.download = "Documentation"; // Set the desired file name
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-  }
-  });
-
-    </script>
 
     <script>
       var fAQContainer = document.getElementById("fAQContainer");
