@@ -4,8 +4,7 @@ import time
 import json
 import subprocess
 from PyQt5.QtGui import QPixmap, QFont
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QAction, QLabel, QPushButton, QGridLayout, \
-    QMenuBar
+from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QAction, QLabel, QPushButton
 from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer
 from scapy.all import sniff, wrpcap
 import requests
