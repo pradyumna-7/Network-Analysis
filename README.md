@@ -57,4 +57,4 @@ Confirm that Java is installed on your system. If not, download and install the 
 ### d.	Verify Configuration:
 Open a new Command Prompt window and type java -version to ensure that the Java environment variable is set up correctly. You should see information about your installed Java version.
 
-# You are now ready to use the main software. Execute cypher_py.exe to launch the application.                                                                            
+# You are now ready to use the main software. Execute Detect.py to launch the application.                                                                            
