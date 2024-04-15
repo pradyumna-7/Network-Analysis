@@ -223,10 +223,8 @@ class MalwareDetectionApp(QMainWindow):
             x_labels = list(result_dict.keys())  # X-axis labels
             percentages = list(result_dict.values())  # List of lists containing percentages
 
-            # Calculate the width for each bar group
-            bar_width = 0.25  # You can adjust this value to change the gap between groups
+            bar_width = 0.25
 
-            # Set the positions of the bars on the x-axis
             index = np.arange(len(x_labels))
             labels = ['AdaBoost', 'Nearest Neighbors', 'Random Forest']
 
@@ -266,6 +264,7 @@ class MalwareDetectionApp(QMainWindow):
 def delete_file(file_path):
     try:
         os.remove(file_path)
+        print(f"Deleted file:{file_path}")
     except Exception as e:
         print(f"Error deleting file {file_path}: {e}")
 
